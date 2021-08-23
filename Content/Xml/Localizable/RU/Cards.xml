@@ -1,0 +1,865 @@
+<Tiles>
+  <sensor>
+    <gamepad label="геймпад">Позволяет управлять персонажем. Укажите кнопку, триггер или джойстик, а также другого игрока.</gamepad>
+    <keyboard label="клавиши">Клавиши на клавиатуре позволяют управлять персонажем. Укажите, какой клавишей.</keyboard>
+    <mouse label="мышь">Реагирует на действия мыши.</mouse>
+    <eyes label="вижу">Реагирует, когда вы видите объект, в зависимости от его цвета. Холмы и долины могут блокировать вид, если вы используете LOS-фильтр. </eyes>
+    <ears label="слышу">Реагирует, когда вы слышите объект, в зависимости от типа звука. Слышит через стены</ears>
+    <bumpers label="касание">Реагирует, когда вы сталкиваетесь с другим объектом, в зависимости от его типа, цвета и т.д.</bumpers>
+    <timer label="таймер">Реагирует на количество секунд. Добавьте еще числа, чтобы увеличить время. </timer>
+    <got label="взял">Реагирует, когда вы что-то подняли, в зависимости, что именно, его цвета и т.д.</got>
+    <scored label="счет">Реагирует на изменения в счете. </scored>
+    <health label="жизнь">Реагирует на изменение здоровья</health>
+    <missilehit label="попал!">Реагирует, когда вы подстрелили другой объект. Хорошо подходит для увеличения счета, но вы также можете делать что-то еще: например, поменять цвет бота на розовый, когда вы в него попали</missilehit>
+    <held label="взят">Реагирует, если его подобрали. </held>
+    <terrain label="земля">Реагирует на разные типы земной поверхности</terrain>
+    <water label="вода">Реагирует на разные типы водной поверхности</water>
+    <always label="всегда">Делает что-то ВСЕГДА. Необязательно использовать. </always>
+  </sensor>
+  <filter>
+    <nothing />
+    <boku label="kodu">Коду - это персонаж, который вы можете добавить в игру и чье поведение можно запрограммировать.</boku>
+    <bokubot label="kodu">Коду - это персонаж, который вы можете добавить в игру и чье поведение можно запрограммировать.</bokubot>
+    <anything label="что-либо" />
+    <me label="я" />
+    <countnone label="none">Реагирует, когда вы не видите ничего, что подходило бы под описание (условия). Например: условие "вижу  - синий - нет " сработает тогда, когда нет ничего синего. </countnone>
+    <flyfish label="лет. рыба">Летающая рыба - персонаж, который вы можете добавить в игру и чье поведение вы можете запрограммировать</flyfish>
+    <jet label="самолет">Самолет  - персонаж, который вы можете добавить в игру и чье поведение вы можете запрограммировать.</jet>
+    <light label="свет">Свет - персонаж, который вы можете добавить в игру и чье поведение вы можете запрограммировать. Он освещает объекты. Но вы можете добавить только 4 света.</light>
+    <fastbot label="байкер">Байкер  - персонаж, который вы можете добавить в игру и чье поведение вы можете запрограммировать.</fastbot>
+    <saucer label="тарелка">Извините, я не могу ничего больше сообщить. Информация о летающей тарелке засекречена</saucer>
+    <windblimp label="аэростат">Аэростат  - персонаж, который вы можете добавить в игру и чье поведение вы можете запрограммировать.</windblimp>
+    <balloonbot label="шар">Воздушный шар - персонаж, который вы можете добавить в игру и чье поведение вы можете запрограммировать.</balloonbot>
+    <subbot label="подлодка">Подводная лодка - персонаж, который вы можете добавить в игру и запрограммировать.</subbot>
+    <terracannon label="пушка">Пушка  - персонаж, который вы можете добавить в игру и чье поведение вы можете запрограммировать.</terracannon>
+    <puck label="шайба">Шайба  - персонаж, который вы можете добавить в игру и чье поведение вы можете запрограммировать.</puck>
+    <wisp label="плазма">Плазма - персонаж, который вы можете добавить в игру и чье поведение вы можете запрограммировать.</wisp>
+    <anybot label="бот">Ищет бот любого вида</anybot>
+    <turtle label="черепаха">Реагирует на черепаху.</turtle>
+    <pushpad label="тубма">Реагирует на тумбу.</pushpad>
+    <sputnik label="спутник">Реагирует на спутник.</sputnik>
+    <stick label="задвижка">Реагирует на задвижку.</stick>
+    <stickboy label="задвижка">Реагирует на задвижку.</stickboy>
+    <drum label="батут">Реагирует на батут.</drum>
+    <mine label="мина">Реагирует на мину.</mine>
+    <cloud label="облако">Реагирует на облако.</cloud>
+    <swimfish label="рыба">Реагирует на рыбу.</swimfish>
+    <floatbot label="корабль">Реагирует на кораблик.</floatbot>
+    <factory label="завод">Реагирует на завод.</factory>
+    <hut label="хижина">Реагирует на хижину.</hut>
+    <castle label="замок">Реагирует на замок.</castle>
+    <fruit label="яблоко">Реагирует на яблоко</fruit>
+    <rock label="камень">Реагирует на камень.</rock>
+    <tree label="дерево">Реагирует на дерево.</tree>
+    <building label="здание">Реагирует на здание.</building>
+    <flower label="flower" />
+    <gate label="gate" />
+        <cursor label="курсор">Реагирует на курсор.</cursor>
+    <star label="звезда">Реагирует на звезду.</star>
+    <coin label="монета">Реагирует на монету.</coin>
+    <soccerball label="мяч">Реагирует на мяч.</soccerball>
+    <heart label="сердце">Реагирует на сердечко.</heart>
+    <bullet label="снаряд">Реагирует на снаряд.</bullet>
+    <Black label="черный">Реагирует на что-либо черное.</Black>
+    <Grey label="серый">Реагирует на что-либо серое.</Grey>
+    <white label="белый">Реагирует на что-либо белое.</white>
+    <red label="красный">Реагирует на что-либо красное.</red>
+    <orange label="оранж">Реагирует на что-либо оранжевое.</orange>
+    <yellow label="желтый">Реагирует на что-либо желтое.</yellow>
+    <green label="зеленый">Реагирует на что-либо зеленое.</green>
+    <blue label="синий">Реагирует на что-либо синее.</blue>
+    <purple label="пурпур">Реагирует на что-либо пурпурное.</purple>
+    <pink label="розовый">Реагирует на что-либо розовое.</pink>
+    <brown label="коричнев">Реагирует на что-либо коричневое.</brown>
+    <pathplain label="равнина" />
+    <pathroad label="дорога" />
+    <pathwall label="стена" />
+    <pathflora label="флора" />
+    <yucca1 label="дерево" />
+    <yucca2 label="дерево" />
+    <yucca3 label="дерево" />
+    <bigyucca1 label="дерево" />
+    <expresshappy label="счастье">Реагирует на счастливый бот.</expresshappy>
+    <expresssad label="грусть">Реагирует на грустный бот.</expresssad>
+    <expressangry label="ЗЛОСТЬ">Реагирует на рассерженный бот.</expressangry>
+    <expresscrazy label="сУмаСШе">Реагирует на сумасшедший бот.</expresscrazy>
+    <expresshearts label="сердца">Реагирует на бот, показывающий сердечки.</expresshearts>
+    <expressflowers label="цветы">Реагирует на бот, показывающий цветы.</expressflowers>
+    <expressstars label="звезды">Реагирует на бот, показывающий звезды.</expressstars>
+    <expressswear label="ругань">Реагирует на ругающийся бот.</expressswear>
+    <expressnormal label="обычный">Реагирует на бот, который ведет себя обычно.</expressnormal>
+    <expressnone label="обычный">Реагирует на бот, который ведет себя обычно.</expressnone>
+    <moving label="движение">Реагирует на бот, только если он движется.</moving>
+    <closeby label="рядом">Close By (Рядом) заставляет персонаж делать что-то только в случае, если объекты находятся близко к нему. Объекты вдали будут игнорироваться.</closeby>
+    <faraway label="далеко">Реагирует только на объекты, которые далеко.</faraway>
+
+    <infront label="впереди">Реагирует только на объекты впереди бота.</infront>
+    <behind label="позади">Реагирует только на объекты позади бота. </behind>
+    <toleft label="слева">Реагирует только на объекты слева от бота.</toleft>
+    <toright label="справа">Реагирует только на объекты справа от бота.</toright>
+    <over label="сверху">Реагирует только на объекты выше бота.</over>
+    <under label="ниже">Реагирует только на объекты ниже бота.</under>
+
+    <lineofsight label="line of sight">Сенсор блокировки земли и стен. </lineofsight>
+    
+    <countfew label="мало">Реагирует, когда видит лишь несколько копий предмета.</countfew>
+    <countmany label="много">Реагирует только когда видит много копий предмета.</countmany>
+    <countany label="any" />
+    <leftstick label="L stick">Реагирует на левый джойстик контроллера. Хорошо использовать для управления движением.</leftstick>
+    <rightstick label="R stick">Реагирует на правый джойстик контроллера. Хорошо для стрельбы. </rightstick>
+    <abutton label="A button">Реагирует на кнопку A на контроллере.</abutton>
+    <bbutton label="B button">Реагирует на кнопку B на контроллере.</bbutton>
+    <xbutton label="X button">Реагирует на кнопку X на контроллере.</xbutton>
+    <ybutton label="Y button">Реагирует на кнопку Y на контроллере.</ybutton>
+    <lefttrigger label="left trig">Реагирует на левое плечо на контроллере.</lefttrigger>
+    <righttrigger label="right trig">Реагирует на the right trigger на контроллере.</righttrigger>
+    <lefttrigger_analog label="left trig">Реагирует на the left trigger на контроллере.</lefttrigger_analog>
+    <righttrigger_analog label="right trig">Реагирует на the right trigger на контроллере.</righttrigger_analog>
+    <mouse>
+      <button>
+        <left label="левая">Реагирует на левую кнопку мыши.</left>
+        <right label="правая">Реагирует на правую кнопку мыши.</right>
+      </button>
+      <hover label="поверх">Реагирует на ведение мышью над объектом или землей.</hover>
+      <move label="движение">Реагирует на движение мышью.</move>
+    </mouse>
+    <ArrowKeys label="стрелки">Реагирует на стрелки (любые) на клавиатуре.</ArrowKeys>
+    <WASDKeys label="WASD">Реагирует на клавиши WASD (ЦФЫВ) на клавиатуре.</WASDKeys>
+    <Akey label="A">Реагирует на клавишу A (Ф) на клавиатуре.</Akey>
+    <Bkey label="B">Реагирует на клавишу B (Ы) на клавиатуре.</Bkey>
+    <Ckey label="C">Реагирует на клавишу C на клавиатуре.</Ckey>
+    <Dkey label="D">Реагирует на клавишу D на клавиатуре.</Dkey>
+    <Ekey label="E">Реагирует на клавишу E на клавиатуре.</Ekey>
+    <Fkey label="F">Реагирует на клавишу F на клавиатуре.</Fkey>
+    <Gkey label="G">Реагирует на клавишу  G на клавиатуре.</Gkey>
+    <Hkey label="H">Реагирует на клавишу  H на клавиатуре.</Hkey>
+    <Ikey label="I">Реагирует на клавишу  I на клавиатуре.</Ikey>
+    <Jkey label="J">Реагирует на клавишу  J на клавиатуре.</Jkey>
+    <Kkey label="K">Реагирует на клавишу  K на клавиатуре.</Kkey>
+    <Lkey label="L">Реагирует на клавишу  L на клавиатуре.</Lkey>
+    <Mkey label="M">Реагирует на клавишу  M на клавиатуре.</Mkey>
+    <Nkey label="N">Реагирует на клавишу  N на клавиатуре.</Nkey>
+    <Okey label="O">Реагирует на клавишу  O на клавиатуре.</Okey>
+    <Pkey label="P">Реагирует на клавишу  P на клавиатуре.</Pkey>
+    <Qkey label="Q">Реагирует на клавишу  Q на клавиатуре.</Qkey>
+    <Rkey label="R">Реагирует на клавишу  R на клавиатуре.</Rkey>
+    <Skey label="S">Реагирует на клавишу  S на клавиатуре.</Skey>
+    <Tkey label="T">Реагирует на клавишу  T на клавиатуре.</Tkey>
+    <Ukey label="U">Реагирует на клавишу  U на клавиатуре.</Ukey>
+    <Vkey label="V">Реагирует на клавишу  V на клавиатуре.</Vkey>
+    <Wkey label="W">Реагирует на клавишу  W на клавиатуре.</Wkey>
+    <Xkey label="X">Реагирует на клавишу  X на клавиатуре.</Xkey>
+    <Ykey label="Y">Реагирует на клавишу  Y на клавиатуре.</Ykey>
+    <Zkey label="Z">Реагирует на клавишу  Z на клавиатуре.</Zkey>
+    <D0key label="0">Реагирует на клавишу  0 на клавиатуре.</D0key>
+    <D1key label="1">Реагирует на клавишу  1 на клавиатуре.</D1key>
+    <D2key label="2">Реагирует на клавишу  2 на клавиатуре.</D2key>
+    <D3key label="3">Реагирует на клавишу  3 на клавиатуре.</D3key>
+    <D4key label="4">Реагирует на клавишу  4 на клавиатуре.</D4key>
+    <D5key label="5">Реагирует на клавишу  5 на клавиатуре.</D5key>
+    <D6key label="6">Реагирует на клавишу  6 на клавиатуре.</D6key>
+    <D7key label="7">Реагирует на клавишу  7 на клавиатуре.</D7key>
+    <D8key label="8">Реагирует на клавишу  8 на клавиатуре.</D8key>
+    <D9key label="9">Реагирует на клавишу  9 на клавиатуре.</D9key>
+    <Spacekey label="пробел">Реагирует на клавишу  Space на клавиатуре.</Spacekey>
+    <PageUpkey label="PageUp">Реагирует на клавишу  PageUp на клавиатуре.</PageUpkey>
+    <PageDownkey label="PageDown">Реагирует на клавишу  PageDown на клавиатуре.</PageDownkey>
+    <Endkey label="End">Реагирует на клавишу  End клавиатуре.</Endkey>
+    <Leftkey label="влево">Реагирует на клавишу  Left (стрелка влево) на клавиатуре.</Leftkey>
+    <Upkey label="вверх">Реагирует на клавишу  Up (стрелка вверх)  на клавиатуре.</Upkey>
+    <Rightkey label="вправо">Реагирует на клавишу  Right (стрелка вправо) на клавиатуре.</Rightkey>
+    <Downkey label="вниз">Реагирует на клавишу  Down (стрелка вниз) на клавиатуре.</Downkey>
+    <Insertkey label="Insert">Реагирует на клавишу  Insert (вставить) на клавиатуре.</Insertkey>
+    <Deletekey label="Delete">Реагирует на клавишу  Delete (удалить) на клавиатуре.</Deletekey>
+    <LeftWindowskey label="LeftWindows">Реагирует на клавишу LeftWindows  на клавиатуре.</LeftWindowskey>
+    <RightWindowskey label="RightWindows">Реагирует на клавишу RightWindows  на клавиатуре.</RightWindowskey>
+    <Multiplykey label="*">Реагирует на клавишу умножения на клавиатуре.</Multiplykey>
+    <Addkey label="+">Реагирует на клавишу сложения  на клавиатуре.</Addkey>
+    <Subtractkey label="-">Реагирует на клавишу вычитания на клавиатуре.</Subtractkey>
+    <Decimalkey label=".">Реагирует на клавишу десятичного разделителя на клавиатуре.</Decimalkey>
+    <Dividekey label="/">Реагирует на клавишу деления на клавиатуре.</Dividekey>
+    <LeftShiftkey label="LeftShift">Реагирует на клавишу LeftShift  на клавиатуре.</LeftShiftkey>
+    <RightShiftkey label="RightShift">Реагирует на клавишу RightShift  на клавиатуре.</RightShiftkey>
+    <LeftControlkey label="LeftControl">Реагирует на клавишу LeftControl  на клавиатуре.</LeftControlkey>
+    <RightControlkey label="RightControl">Реагирует на клавишу RightControl  на клавиатуре.</RightControlkey>
+    <LeftAltkey label="LeftAlt">Реагирует на клавишу LeftAlt  на клавиатуре.</LeftAltkey>
+    <RightAltkey label="RightAlt">Реагирует на клавишу RightAlt  на клавиатуре.</RightAltkey>
+    <OemSemicolonkey label=";">Реагирует на клавишу Semicolon  на клавиатуре.</OemSemicolonkey>
+    <OemPluskey label="+">Реагирует на клавишу Plus  на клавиатуре.</OemPluskey>
+    <OemCommakey label=",">Реагирует на клавишу Comma  на клавиатуре.</OemCommakey>
+    <OemMinuskey label="-">Реагирует на клавишу Minus  на клавиатуре.</OemMinuskey>
+    <OemPeriodkey label=".">Реагирует на клавишу Period  на клавиатуре.</OemPeriodkey>
+    <OemQuestionkey label="?">Реагирует на клавишу Question  на клавиатуре.</OemQuestionkey>
+    <OemTildekey label="~">Реагирует на клавишу Tilde  на клавиатуре.</OemTildekey>
+    <OemOpenBracketskey label="[">Реагирует на клавишу OpenBrackets  на клавиатуре.</OemOpenBracketskey>
+    <OemPipekey label="|">Реагирует на клавишу Pipe  на клавиатуре.</OemPipekey>
+    <OemCloseBracketskey label="]">Реагирует на клавишу CloseBrackets  на клавиатуре.</OemCloseBracketskey>
+    <OemQuoteskey label="&quot;">Реагирует на клавишу Quotes  на клавиатуре.</OemQuoteskey>
+    <OemBackslashkey label="\">Реагирует на клавишу Backslash  на клавиатуре.</OemBackslashkey>
+    <F1key label="F1">Реагирует на клавишу F1  на клавиатуре.</F1key>
+    <F2key label="F2">Реагирует на клавишу F2  на клавиатуре.</F2key>
+    <F3key label="F3">Реагирует на клавишу F3  на клавиатуре.</F3key>
+    <F4key label="F4">Реагирует на клавишу F4  на клавиатуре.</F4key>
+    <F5key label="F5">Реагирует на клавишу F5  на клавиатуре.</F5key>
+    <F6key label="F6">Реагирует на клавишу F6  на клавиатуре.</F6key>
+    <F7key label="F7">Реагирует на клавишу F7  на клавиатуре.</F7key>
+    <F8key label="F8">Реагирует на клавишу F8  на клавиатуре.</F8key>
+    <F9key label="F9">Реагирует на клавишу F9  на клавиатуре.</F9key>
+    <F10key label="F10">Реагирует на клавишу F10  на клавиатуре.</F10key>
+    <F11key label="F11">Реагирует на клавишу F11  на клавиатуре.</F11key>
+    <F12key label="F12">Реагирует на клавишу F12  на клавиатуре.</F12key>
+    <Shiftkey label="Shift">Реагирует на любую клавишу Shift key на клавиатуре.</Shiftkey>
+    <Controlkey label="Control">Реагирует на любую клавишу Control key на клавиатуре.</Controlkey>
+    <Altkey label="Alt">Реагирует на любую клавишу Alt key на клавиатуре.</Altkey>
+    <Windowskey label="Windows">Реагирует на любую Windows key на клавиатуре.</Windowskey>
+    <player1 label="player 1">Реагирует только на контроллер 1го игрока (Player 1). По умолчанию реагирует на любой.</player1>
+    <player2 label="player 2">Реагирует только на контроллер 2го игрока (Player 2) . По умолчанию реагирует на любой.</player2>
+    <player3 label="player 3">Реагирует только на контроллер 3го игрока (Player 3). По умолчанию реагирует на любой.</player3>
+    <player4 label="player 4">Реагирует только на контроллер 4го игрока (Player 4). По умолчанию реагирует на любой.</player4>
+    <terrain label="тип">Реагирует на указанный тип территории.</terrain>
+    <water label="тип">Реагирует на указанный тип воды.</water>
+    <quartersecond label="сек">1/4 секунды.  Объединяйте с другими числами, чтобы получить больше времени</quartersecond>
+    <_01second label="сек">1 секунда.  Объединяйте с другими числами, чтобы получить больше времени</_01second>
+    <_02seconds label="сек">2 секунды.  Объединяйте с другими числами, чтобы получить больше времени</_02seconds>
+    <_03seconds label="сек">3 секунды.  Объединяйте с другими числами, чтобы получить больше времени</_03seconds>
+    <_04seconds label="сек">4 секунды.  Объединяйте с другими числами, чтобы получить больше времени</_04seconds>
+    <_05seconds label="сек">5 секунд.  Объединяйте с другими числами, чтобы получить больше времени</_05seconds>
+    <_10seconds label="сек">10 секунд.  Объединяйте с другими числами, чтобы получить больше времени</_10seconds>
+    <_20seconds label="сек">20 секунд.  Объединяйте с другими числами, чтобы получить больше времени</_20seconds>
+    <_30seconds label="сек">30 секунд.  Объединяйте с другими числами, чтобы получить больше времени</_30seconds>
+    <_60seconds label="сек">60 секунд.  Объединяйте с другими числами, чтобы получить больше времени</_60seconds>
+    <_000point label="очки">0 очков.</_000point>
+    <_001point label="очки">1 очко.  Объединяйте с другими числами, чтобы получить больше очков</_001point>
+    <_002points label="очки">2 очка.  Объединяйте с другими числами, чтобы получить больше очков</_002points>
+    <_003points label="очки">3 очка.  Объединяйте с другими числами, чтобы получить больше очков</_003points>
+    <_004points label="очки">4 очка.  Объединяйте с другими числами, чтобы получить больше очков</_004points>
+    <_005points label="очки">5 очков.  Объединяйте с другими числами, чтобы получить больше очков</_005points>
+    <_010points label="очки">10 очков.  Объединяйте с другими числами, чтобы получить больше очков</_010points>
+    <_020points label="очки">20 очков.  Объединяйте с другими числами, чтобы получить больше очков</_020points>
+    <_050points label="очки">50 очков.  Объединяйте с другими числами, чтобы получить больше очков</_050points>
+    <_100points label="очки">100 очков.  Объединяйте с другими числами, чтобы получить больше очков</_100points>
+    <random label="случайно">Создает случайное число в диапазоне, указанном в карточке число. Например, Случайно - 5 создаст случайное число между 0 и 5. </random>
+    <scorebucket>
+      <color>
+        <white label="белый">Проверяет баллы в белом счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</white>
+        <black label="черный">Проверяет баллы в черном счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</black>
+        <grey label="серый">Проверяет баллы в сером счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</grey>
+        <red label="красный">Проверяет баллы в красном счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</red>
+        <green label="зеленый">Проверяет баллы в зеленом счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</green>
+        <blue label="синий">Проверяет баллы в синем счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</blue>
+        <orange label="оранж">Проверяет баллы в оранжевом счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</orange>
+        <yellow label="желтый">Проверяет баллы в желтом счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</yellow>
+        <purple label="пурпур">Проверяет баллы в малиновом счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</purple>
+        <pink label="розовый">Проверяет баллы в розовом счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</pink>
+        <brown label="коричн">Проверяет баллы в коричневом счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</brown>
+      </color>
+      <letter>
+        <a label="счет A">Проверяет баллы в счете 'A', который никогда не показывается на табло.</a>
+        <b label="счет B">Проверяет баллы в счете 'B', который никогда не показывается на табло.</b>
+        <c label="счет C">Проверяет баллы в счете 'C', который никогда не показывается на табло.</c>
+        <d label="счет D">Проверяет баллы в счете 'D', который никогда не показывается на табло.</d>
+        <e label="счет E">Проверяет баллы в счете 'E', который никогда не показывается на табло.</e>
+        <f label="счет F">Проверяет баллы в счете 'F', который никогда не показывается на табло.</f>
+        <g label="счет G">Проверяет баллы в счете 'G', который никогда не показывается на табло.</g>
+        <h label="счет H">Проверяет баллы в счете 'H', который никогда не показывается на табло.</h>
+        <i label="счет I">Проверяет баллы в счете 'I', который никогда не показывается на табло.</i>
+        <j label="счет J">Проверяет баллы в счете 'J', который никогда не показывается на табло.</j>
+        <k label="счет K">Проверяет баллы в счете 'K', который никогда не показывается на табло.</k>
+        <l label="счет L">Проверяет баллы в счете 'L', который никогда не показывается на табло.</l>
+        <m label="счет M">Проверяет баллы в счете 'M', который никогда не показывается на табло.</m>
+        <n label="счет N">Проверяет баллы в счете 'N', который никогда не показывается на табло.</n>
+        <o label="счет O">Проверяет баллы в счете 'O', который никогда не показывается на табло.</o>
+        <p label="счет P">Проверяет баллы в счете 'P', который никогда не показывается на табло.</p>
+        <q label="счет Q">Проверяет баллы в счете 'Q', который никогда не показывается на табло.</q>
+        <r label="счет R">Проверяет баллы в счете 'R', который никогда не показывается на табло.</r>
+        <s label="счет S">Проверяет баллы в счете 'S', который никогда не показывается на табло.</s>
+        <t label="счет T">Проверяет баллы в счете 'T', который никогда не показывается на табло.</t>
+        <u label="счет U">Проверяет баллы в счете 'U', который никогда не показывается на табло.</u>
+        <v label="счет V">Проверяет баллы в счете 'V', который никогда не показывается на табло.</v>
+        <w label="счет W">Проверяет баллы в счете 'W', который никогда не показывается на табло.</w>
+        <x label="счет X">Проверяет баллы в счете 'X', который никогда не показывается на табло.</x>
+        <y label="счет Y">Проверяет баллы в счете 'Y', который никогда не показывается на табло.</y>
+        <z label="счет Z">Проверяет баллы в счете 'Z', который никогда не показывается на табло.</z>
+      </letter>
+      <local>
+        <a label="счет a">The 'a' score, which is private to this character.</a>
+        <b label="счет b">The 'b' score, which is private to this character.</b>
+        <c label="счет c">The 'c' score, which is private to this character.</c>
+        <d label="счет d">The 'd' score, which is private to this character.</d>
+        <e label="счет e">The 'e' score, which is private to this character.</e>
+        <f label="счет f">The 'f' score, which is private to this character.</f>
+        <g label="счет g">The 'g' score, which is private to this character.</g>
+        <h label="счет h">The 'h' score, which is private to this character.</h>
+        <i label="счет i">The 'i' score, which is private to this character.</i>
+        <j label="счет j">The 'j' score, which is private to this character.</j>
+        <k label="счет k">The 'k' score, which is private to this character.</k>
+        <l label="счет l">The 'l' score, which is private to this character.</l>
+        <m label="счет m">The 'm' score, which is private to this character.</m>
+        <n label="счет n">The 'n' score, which is private to this character.</n>
+        <o label="счет o">The 'o' score, which is private to this character.</o>
+        <p label="счет p">The 'p' score, which is private to this character.</p>
+        <q label="счет q">The 'q' score, which is private to this character.</q>
+        <r label="счет r">The 'r' score, which is private to this character.</r>
+        <s label="счет s">The 's' score, which is private to this character.</s>
+        <t label="счет t">The 't' score, which is private to this character.</t>
+        <u label="счет u">The 'u' score, which is private to this character.</u>
+        <v label="счет v">The 'v' score, which is private to this character.</v>
+        <w label="счет w">The 'w' score, which is private to this character.</w>
+        <x label="счет x">The 'x' score, which is private to this character.</x>
+        <y label="счет y">The 'y' score, which is private to this character.</y>
+        <z label="счет z">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <scoretrigger label="trigger" />
+    <timertrigger label="trigger" />
+    <scoreis label="is" />
+    <scoreabove label="выше">Реагирует, когда счет превысил указанное число. </scoreabove>
+    <scorebelow label="ниже">Реагирует, когда счет ниже указанного числа. </scorebelow>
+    <healthis label="is" />
+    <healthabove label="выше">Реагирует, когда здоровье превышает указанное число. </healthabove>
+    <healthbelow label="ниже">Реагирует, когда здоровье ниже указанного числа. </healthbelow>
+    <direction>
+      <up label="вверх">Реагирует на джойстик, перемещаемый вверх.</up>
+      <right label="вправо">Реагирует на джойстик, перемещаемый вправо.</right>
+      <down label="вниз">Реагирует на джойстик, перемещаемый вниз.</down>
+      <left label="влево">Реагирует на джойстик, перемещаемый влево.</left>
+    </direction>
+    <not label="нет">Реагирует, если условие When (Когда) не совпадает. </not>
+  </filter>
+  <selector>
+    <closest label="ближайш" />
+    <objectrelative label="относител" />
+    <towardclosest label="к нему">Двигается вперед.</towardclosest>
+    <awayfromall label="от него">Двигается прочь. </awayfromall>
+    <avoidall label="избежать">Избегает предмета, соблюдая дистанцию.</avoidall>
+    <wander label="свободно">Двигается произвольно, выбирая направление случайным образом. Полезно в качестве последней строчки программы, чтобы ваш персонаж так двигался, если он ничем другим не занят.
+</wander>
+    <cruise label="прямо">Двигается в том направлении, куда вы сейчас смотрите.</cruise>
+    <circle label="кругами" />
+    <spin label="поворот">Поворот</spin>
+    <forward label="вперед" />
+    <hiddenturn label="поворот" />
+    <escape label="прочь" />
+    <followwaypoints label="по путям">Двигается по путям определенного цвета. По умолчанию двигается по любым путям. </followwaypoints>
+    <moveupdown label="вверх/вн">Двигается вверх и вниз.</moveupdown>
+    <moveup label="вверх">Двигается вверх. </moveup>
+    <movedown label="вниз">Двигается вниз. </movedown>
+    <moveleftright label="поворот">Двигается влево и право. </moveleftright>
+  </selector>
+  <modifier>
+    <player>
+      <_1 label="player 1" />
+      <_2 label="player 2" />
+      <_3 label="player 3" />
+      <_4 label="player 4" />
+    </player>
+    <reset>
+      <world label="мир">Начинает игру сначала, оставляя накопленный счет.</world>
+      <score label="счет">Сбрасывает табло со счетом или индивидуальный счет указанного вами цвета. </score>
+      <expression label="эмоции">Сбрасывает выражение эмоций персонажа. </expression>
+      <glow label="свечение">Переустанавливает свечение персонажа. </glow>
+      <health label="жизнь">Сбрасывает здоровье персонажа.</health>
+    </reset>
+    <projectile>
+      <blip label="пульки">Пульки  - это быстрые снаряды, они легче, чем ракеты. </blip>
+      <missile label="ракеты">Ракеты большие и не очень быстрые, но достаточно умные, чтобы поражать свои цели!</missile>
+    </projectile>
+    <slowly label="медленно">Двигается более медленно. Используйте несколько раз, чтобы двигаться еще медленнее. </slowly>
+    <quickly label="быстро">Двигается более быстро. Необязательный параметр. </quickly>
+    <speednormally label="обычно">Двигается обычно. </speednormally>
+    <weakly label="слабо">Делает более слабо, чем обычно</weakly>
+    <strongly label="сильно">Делает более сильно, чем обычно. </strongly>
+    <strengthnormally label="обычно">Делает с обычным усилием. </strengthnormally>
+    <angle>
+      <low label="низко">Делает ниже, чем обычно</low>
+      <high label="высоко">Делает выше, чем обычно. </high>
+    </angle>
+    <turnleft label="налево" />
+    <turnright label="направо" />
+    <turntoward label="избежать" />
+    <turnforward label="к нему">Указывает, что движение не должно определять то, куда смотрит персонаж</turnforward>
+    <pitchup label="вверх" />
+    <pitchdown label="вниз" />
+    <forward label="вперед">Направление движения, куда смотрит персонаж. </forward>
+    <north label="север" />
+    <east label="восток" />
+    <south label="юг" />
+    <west label="запад" />
+    <up label="вверх" />
+    <down label="вниз" />
+    <distance>
+      <near label="близко">Персонаж будет вращаться вокруг цели с маленьким радиусом. </near>
+      <far label="далеко">Персонаж будет вращаться вокруг цели с большим радиусом. </far>
+    </distance>
+    <objectrock label="камень">Создает камень. </objectrock>
+    <objectfruit label="яблоко">Создает яблоко. </objectfruit>
+    <objectstar label="звезда">Создает звезду. </objectstar>
+    <objectcoin label="монета">Создает монету</objectcoin>
+    <objectheart label="сердце">Создает сердце. </objectheart>
+  </modifier>
+  <modifer>
+    <objectsoccerball label="мяч">Создает мяч. </objectsoccerball>
+    <objectbullet label="снаряд">Создает снаряд. </objectbullet>
+  </modifer>
+  <modifier>
+    <taska label="стр. 1">Переключается на страницу 1.</taska>
+    <taskb label="стр. 2">Переключается на страницу 2.</taskb>
+    <taskc label="стр. 3">Переключается на страницу 3.</taskc>
+    <taskd label="стр. 4">Переключается на страницу 4.</taskd>
+    <taske label="стр. 5">Переключается на страницу 5.</taske>
+    <taskf label="стр. 6">Переключается на страницу 6.</taskf>
+    <taskg label="стр. 7">Переключается на страницу 7.</taskg>
+    <taskh label="стр. 8">Переключается на страницу 8.</taskh>
+    <taski label="стр. 9">Переключается на страницу 9.</taski>
+    <taskj label="стр. 10">Переключается на страницу 10.</taskj>
+    <taskk label="стр. 11">Переключается на страницу 11.</taskk>
+    <taskl label="стр. 12">Переключается на страницу 12.</taskl>
+    <expresshappy label="радость">Счастливый. </expresshappy>
+    <expresssad label="грусть">Несчастный. </expresssad>
+    <expressangry label="злой">Сердитый.</expressangry>
+    <expresscrazy label="CrAzY">Сумасшедший. </expresscrazy>
+    <expresshearts label="сердца">Показывает сердечки. </expresshearts>
+    <expressflowers label="цветы">Показывает цветы</expressflowers>
+    <expressstars label="звезды">Показывает звезды. </expressstars>
+    <expressswear label="ругань">Показывает мультяшные ругательства. </expressswear>
+    <expressnone label="ничего">Действует без эмоций. </expressnone>
+    <_000point label="очки">0 очков. Вы можете указать также цвет. </_000point>
+    <_001point label="очко">1 очко.  Используйте несколько чисел, чтобы получить нужное вам число. Вы также можете указать цвет. </_001point>
+    <_002points label="очка">2 очка.  Используйте несколько чисел, чтобы получить нужное вам число. Вы также можете указать цвет. </_002points>
+    <_003points label="очка">3 очка.  Используйте несколько чисел, чтобы получить нужное вам число. Вы также можете указать цвет. </_003points>
+    <_004points label="очка">4 очка.  Используйте несколько чисел, чтобы получить нужное вам число. Вы также можете указать цвет. </_004points>
+    <_005points label="очков">5 очков.  Используйте несколько чисел, чтобы получить нужное вам число. Вы также можете указать цвет. </_005points>
+    <_010points label="очков">10 очков.  Используйте несколько чисел, чтобы получить нужное вам число. Вы также можете указать цвет. </_010points>
+    <_020points label="очков">20 points.  Используйте несколько чисел, чтобы получить нужное вам число. Вы также можете указать цвет. </_020points>
+    <_050points label="очков">50 points.  Используйте несколько чисел, чтобы получить нужное вам число. Вы также можете указать цвет. </_050points>
+    <_100points label="очков">100 points.  Используйте несколько чисел, чтобы получить нужное вам число. Вы также можете указать цвет. </_100points>
+    <random label="случайно">Создает случайное число в диапазоне, указанном в карточке число. Например, Случайно- 5 создаст случайное число между 0 и 5. </random>
+    <teama label="team A" />
+    <teamb label="team B" />
+    <payloadzap label="оглушить">Оглушает цель на несколько секунд. </payloadzap>
+    <payloadpop label="нокаут">Вводит в нокаут до тех пор, пока кто-то не переустановит здоровье. </payloadpop>
+    <payloadboom label="бум!">Заставляет цель исчезнуть на несколько секунд, с большим взрывом. </payloadboom>
+    <payloadvanish label="исчезать">Заставляет цель исчезнуть тихо на несколько секунд. </payloadvanish>
+    <black label="черный" />
+    <grey label="серый" />
+    <white label="белый" />
+    <red label="красный" />
+    <orange label="оранж" />
+    <yellow label="желтый" />
+    <green label="зеленый" />
+    <blue label="синий" />
+    <purple label="пурпур" />
+    <pink label="розовый" />
+    <brown label="коричн" />
+    <glowoff label="откл.">Выключает свечение.</glowoff>
+    <colorrandom label="случайно">Выбирает цвет случайным образом.</colorrandom>
+    <path>
+      <black label="черный" />
+      <grey label="серый" />
+      <white label="белый" />
+      <red label="красный" />
+      <orange label="оранж" />
+      <yellow label="желтый" />
+      <green label="зеленый" />
+      <blue label="синий" />
+      <purple label="пурпур" />
+      <pink label="розовый" />
+      <brown label="коричн" />
+    </path>
+    <scorebucket>
+      <color>
+        <white label="белый">Изменяет баллы в белом счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</white>
+        <black label="черный">Изменяет баллы в черном счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</black>
+        <grey label="серый">Изменяет баллы в сером счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</grey>
+        <red label="красный">Изменяет баллы в красном счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</red>
+        <green label="зеленый">Изменяет баллы в зеленом счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</green>
+        <blue label="синий">Изменяет баллы в синем счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</blue>
+        <orange label="оранж">Изменяет баллы в оранжевом счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</orange>
+        <yellow label="желтый">Изменяет баллы в желтом счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</yellow>
+        <purple label="пурпур">Изменяет баллы в малиновом счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</purple>
+        <pink label="розовый">Изменяет баллы в розовом счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</pink>
+        <brown label="коричн">Изменяет баллы в коричневом счете, который выводится на табло. (См. Параметры мира, чтобы изменить.)</brown>
+      </color>
+      <letter>
+        <a label="счет A">Изменяет счет 'A' , который никогда не выводится на экран.</a>
+        <b label="счет B">Изменяет счет 'B' , который никогда не выводится на экран.</b>
+        <c label="счет C">Изменяет счет 'C' , который никогда не выводится на экран.</c>
+        <d label="счет D">Изменяет счет 'D' , который никогда не выводится на экран.</d>
+        <e label="счет E">Изменяет счет 'E' , который никогда не выводится на экран.</e>
+        <f label="счет F">Изменяет счет 'F' , который никогда не выводится на экран.</f>
+        <g label="счет G">Изменяет счет 'G' , который никогда не выводится на экран.</g>
+        <h label="счет H">Изменяет счет 'H' , который никогда не выводится на экран.</h>
+        <i label="счет I">Изменяет счет 'I' , который никогда не выводится на экран.</i>
+        <j label="счет J">Изменяет счет 'J' , который никогда не выводится на экран.</j>
+        <k label="счет K">Изменяет счет 'K' , который никогда не выводится на экран.</k>
+        <l label="счет L">Изменяет счет 'L' , который никогда не выводится на экран.</l>
+        <m label="счет M">Изменяет счет 'M' , который никогда не выводится на экран.</m>
+        <n label="счет N">Изменяет счет 'N' , который никогда не выводится на экран.</n>
+        <o label="счет O">Изменяет счет 'O' , который никогда не выводится на экран.</o>
+        <p label="счет P">Изменяет счет 'P' , который никогда не выводится на экран.</p>
+        <q label="счет Q">Изменяет счет 'Q' , который никогда не выводится на экран.</q>
+        <r label="счет R">Изменяет счет 'R' , который никогда не выводится на экран.</r>
+        <s label="счет S">Изменяет счет 'S' , который никогда не выводится на экран.</s>
+        <t label="счет T">Изменяет счет 'T' , который никогда не выводится на экран.</t>
+        <u label="счет U">Изменяет счет 'U' , который никогда не выводится на экран.</u>
+        <v label="счет V">Изменяет счет 'V' , который никогда не выводится на экран.</v>
+        <w label="счет W">Изменяет счет 'W' , который никогда не выводится на экран.</w>
+        <x label="счет X">Изменяет счет 'X' , который никогда не выводится на экран.</x>
+        <y label="счет Y">Изменяет счет 'Y' , который никогда не выводится на экран.</y>
+        <z label="счет Z">Изменяет счет 'Z' , который никогда не выводится на экран.</z>
+      </letter>
+      <local>
+        <a label="счет a">The 'a' score, which is private to this character.</a>
+        <b label="счет b">The 'b' score, which is private to this character.</b>
+        <c label="счет c">The 'c' score, which is private to this character.</c>
+        <d label="счет d">The 'd' score, which is private to this character.</d>
+        <e label="счет e">The 'e' score, which is private to this character.</e>
+        <f label="счет f">The 'f' score, which is private to this character.</f>
+        <g label="счет g">The 'g' score, which is private to this character.</g>
+        <h label="счет h">The 'h' score, which is private to this character.</h>
+        <i label="счет i">The 'i' score, which is private to this character.</i>
+        <j label="счет j">The 'j' score, which is private to this character.</j>
+        <k label="счет k">The 'k' score, which is private to this character.</k>
+        <l label="счет l">The 'l' score, which is private to this character.</l>
+        <m label="счет m">The 'm' score, which is private to this character.</m>
+        <n label="счет n">The 'n' score, which is private to this character.</n>
+        <o label="счет o">The 'o' score, which is private to this character.</o>
+        <p label="счет p">The 'p' score, which is private to this character.</p>
+        <q label="счет q">The 'q' score, which is private to this character.</q>
+        <r label="счет r">The 'r' score, which is private to this character.</r>
+        <s label="счет s">The 's' score, which is private to this character.</s>
+        <t label="счет t">The 't' score, which is private to this character.</t>
+        <u label="счет u">The 'u' score, which is private to this character.</u>
+        <v label="счет v">The 'v' score, which is private to this character.</v>
+        <w label="счет w">The 'w' score, which is private to this character.</w>
+        <x label="счет x">The 'x' score, which is private to this character.</x>
+        <y label="счет y">The 'y' score, which is private to this character.</y>
+        <z label="счет z">The 'z' score, which is private to this character.</z>
+      </local>
+    </scorebucket>
+    <me label="я">Применяет действие к тому боту, который и выполняет программу. </me>
+    <it label="это">Применяет действие к объекту-цели. </it>
+    <any label="любой">Любой звук. </any>
+    <event>
+      <any label="событие">Любой звук. </any>
+      <silly>
+        <any label="смешно">Любой смешной звук. </any>
+        <bang label="бум-банг">Мультяшный звук "бум". </bang>
+        <pow label="пфф">Мультяшный звук "пфф". </pow>
+      </silly>
+      <explode>
+        <any label="взрыв">Звук взрыва. </any>
+        <A label="взрыв A">Звук взрыва. </A>
+        <B label="взрыв B">Звук взрыва. </B>
+        <C label="взрыв C">Звук взрыва. </C>
+        <D label="взрыв D">Звук взрыва. </D>
+        <E label="взрыв E">Звук взрыва. </E>
+      </explode>
+      <musical>
+        <any label="музыка">Любой музыкальный звук. </any>
+        <glock>
+          <any label="м-фон">Любой звук металлофона.</any>
+        </glock>
+        <glock01 label="C м-фон ">Звук металлофона.</glock01>
+        <glock02 label="C# м-фон">Звук металлофона.</glock02>
+        <glock03 label="D м-фон">Звук металлофона.</glock03>
+        <glock04 label="D# м-фон">Звук металлофона.</glock04>
+        <glock05 label="E м-фон">Звук металлофона.</glock05>
+        <glock06 label="F м-фон">Звук металлофона.</glock06>
+        <glock07 label="F# м-фон">Звук металлофона.</glock07>
+        <glock08 label="G м-фон">Звук металлофона.</glock08>
+        <glock09 label="G# м-фон">Звук металлофона.</glock09>
+        <glock10 label="A м-фон">Звук металлофона.</glock10>
+        <glock11 label="A# м-фон">Звук металлофона.</glock11>
+        <glock12 label="B м-фон">Звук металлофона.</glock12>
+        <gong>
+          <any label="гонг">Любой звук гонга.</any>
+        </gong>
+        <gong01 label="C гонг">Звук гонга.</gong01>
+        <gong02 label="C# гонг">Звук гонга.</gong02>
+        <gong03 label="D гонг">Звук гонга.</gong03>
+        <gong04 label="D# гонг">Звук гонга.</gong04>
+        <gong05 label="E гонг">Звук гонга.</gong05>
+        <gong06 label="F гонг">Звук гонга.</gong06>
+        <gong07 label="F# гонг">Звук гонга.</gong07>
+        <gong08 label="G гонг">Звук гонга.</gong08>
+        <gong09 label="G# гонг">Звук гонга.</gong09>
+        <gong10 label="A гонг">Звук гонга.</gong10>
+        <gong11 label="A# гонг">Звук гонга.</gong11>
+        <gong12 label="B гонг">Звук гонга.</gong12>
+        <saw>
+          <any label="пила">Звук пилы (Произвольный тон).</any>
+        </saw>
+        <saw01 label="C пила">Звук пилы. </saw01>
+        <saw02 label="C# пила">Звук пилы. </saw02>
+        <saw03 label="D пила">Звук пилы. </saw03>
+        <saw04 label="D# пила">Звук пилы. </saw04>
+        <saw05 label="E пила">Звук пилы. </saw05>
+        <saw06 label="F пила">Звук пилы. </saw06>
+        <saw07 label="F# пила">Звук пилы. </saw07>
+        <saw08 label="G пила">Звук пилы. </saw08>
+        <saw09 label="G# пила">Звук пилы. </saw09>
+        <saw10 label="A пила">Звук пилы. </saw10>
+        <saw11 label="A# пила">Звук пилы. </saw11>
+        <saw12 label="B пила">Звук пилы. </saw12>
+        <sine>
+          <any label="волна">Звук, издаваемый синтезатором.</any>
+        </sine>
+        <sine01 label="C волна">Звук синтезатора.</sine01>
+        <sine02 label="C# волна">Звук синтезатора.</sine02>
+        <sine03 label="D волна">Звук синтезатора.</sine03>
+        <sine04 label="D# волна">Звук синтезатора.</sine04>
+        <sine05 label="E волна">Звук синтезатора.</sine05>
+        <sine06 label="F волна">Звук синтезатора.</sine06>
+        <sine07 label="F# волна">Звук синтезатора.</sine07>
+        <sine08 label="G волна">Звук синтезатора.</sine08>
+        <sine09 label="G# волна">Звук синтезатора.</sine09>
+        <sine10 label="A волна">Звук синтезатора.</sine10>
+        <sine11 label="A# волна">Звук синтезатора.</sine11>
+        <sine12 label="B волна">Звук синтезатора.</sine12>
+        <square>
+          <any label="меандр">Еще один вид звуков.</any>
+        </square>
+        <square01 label="C меандр">Еще один вид звуков.</square01>
+        <square02 label="C# меандр">Еще один вид звуков.</square02>
+        <square03 label="D меандр">Еще один вид звуков.</square03>
+        <square04 label="D# меандр">Еще один вид звуков.</square04>
+        <square05 label="E меандр">Еще один вид звуков.</square05>
+        <square06 label="F меандр">Еще один вид звуков.</square06>
+        <square07 label="F# меандр">Еще один вид звуков.</square07>
+        <square08 label="G меандр">Еще один вид звуков.</square08>
+        <square09 label="G# меандр">Еще один вид звуков.</square09>
+        <square10 label="A меандр">Еще один вид звуков.</square10>
+        <square11 label="A# меандр">Еще один вид звуков.</square11>
+        <square12 label="B меандр">Еще один вид звуков.</square12>
+        <drums>
+          <any label="drums">Любой звук ударных.</any>
+        </drums>
+        <bassdrum label="bass">Bass drum.</bassdrum>
+        <hhclosed label="hh closed">Hi-hat cymbal closed.</hhclosed>
+        <hhopen label="hh open">Hi-hat cymbal open.</hhopen>
+        <shaker label="shaker">Shaker.</shaker>
+        <snare label="snare">Snare drum.</snare>
+        <tomlow label="tom low">Low pitched tom.</tomlow>
+        <tommed label="tom med">Medium pitched tom.</tommed>
+        <tomhi label="tom hi">High pitched tom.</tomhi>
+      </musical>
+      <arcade>
+        <any label="аркада">Любой звук аркадной игры.</any>
+        <roboton label="робот I">Активировать робот.</roboton>
+        <robotoff label="робот II">Отключить робот.</robotoff>
+        <coinsound label="монета">Звук монеты.</coinsound>
+        <gethealth label="жизнь+">Звук 'получить жизнь'.</gethealth>
+        <losehealth label="жизнь-">Звук 'потерять жизнь'.</losehealth>
+        <shoot label="стрельба">Стрельба.</shoot>
+        <timer label="таймер">Звук таймера.</timer>
+        <win label="победа">Победа!</win>
+        <lose label="проигрыш">Проигрыш.</lose>
+      </arcade>
+      <misc>
+        <any label="разное">Разнообразные звуки.</any>
+        <firepoof label="запуск">Звук запуска двигателя.</firepoof>
+        <forcefieldup label="щит +">Звук включения защитного поля.</forcefieldup>
+        <forcefielddown label="щит -">Звук выключения защитного поля.</forcefielddown>
+        <hide label="прятать">Кто-то что-то прячет.</hide>
+        <lockontarget label="наводка">Звук, когда цель - в фокусе.</lockontarget>
+        <losetarget label="потеря">Звук потери цели.</losetarget>
+        <positivecondition label="хорошо">Случилось что-то хорошее.</positivecondition>
+        <negativecondition label="плохо">Случилось что-то плохое.</negativecondition>
+        <pop label="чпок">Просто звук.</pop>
+        <popout label="треньк">Просто звук.</popout>
+        <powerup label="powerup">Pick up powerup sound.</powerup>
+        <servo label="servo">Звук Servo.</servo>
+        <watersplash label="всплеск">Звук всплеска воды.</watersplash>
+        <waterdrop label="капли">Звук капающей воды.</waterdrop>
+        <tagbase label="tag base">Звук. </tagbase>
+        <whistlehuman label="свисток">Кто-то свистит.</whistlehuman>
+        <whistlereferee label="свисток">Свисток судьи.</whistlereferee>
+      </misc>
+    </event>
+    <music>
+      <any label="музыка">Любой звук из этой группы.</any>
+      <omni>
+        <any label="омни">Любой звук из этой группы.</any>
+      </omni>
+    </music>
+    <mu_action label="действие">Action</mu_action>
+    <mu_ambientlight label="light">Light ambient music.</mu_ambientlight>
+    <mu_ambinetmodd label="mood">Mood music</mu_ambinetmodd>
+    <mu_brightdowntempo label="slo-mo">Bright downtempo music.</mu_brightdowntempo>
+    <mu_brightfunk label="фанк">Funkaliscious!</mu_brightfunk>
+    <mu_brightguitar label="гитара">Bright guitar music.</mu_brightguitar>
+    <mu_kodu label="kodu">Kodu theme.</mu_kodu>
+    <music>
+      <mystery>
+        <any label="загадка">Любая музыка из этой группы.</any>
+      </mystery>
+    </music>
+    <mysterya label="загадка A">Загадочная музыка.</mysterya>
+    <mysteryb label="загадка B">Загадочная музыка.</mysteryb>
+    <mysteryc label="загадка C">Загадочная музыка.</mysteryc>
+    <music>
+      <driving>
+        <any label="дорога">Любая музыка из этой группы.</any>
+      </driving>
+    </music>
+    <drivinga label="бысто A">Fast, driving music.</drivinga>
+    <drivingb label="бысто B">Fast, driving music.</drivingb>
+    <drivingc label="бысто C">Fast, driving music.</drivingc>
+    <music>
+      <drama>
+        <any label="драма">Любая музыка из этой группы.</any>
+      </drama>
+    </music>
+    <dramaa label="драма A">Драматическая музыка.</dramaa>
+    <dramab label="драма B">Драматическая музыка.</dramab>
+    <environ>
+      <any label="среда">Любая музыка из этой группы.</any>
+      <ambocean label="океан">Звуки океана.</ambocean>
+      <ambforest label="лес">Звуки леса.</ambforest>
+      <ambcity label="город">Звуки города.</ambcity>
+      <ambmeadow label="луг">Звуки луга.</ambmeadow>
+      <arena>
+        <any label="спорт">Любой звук из этой группы.</any>
+        <a label="спорт A">Толпа на стадионе.</a>
+        <b label="спорт B">Толпа на стадионе.</b>
+        <c label="спорт C">Толпа на стадионе.</c>
+        <d label="спорт D">Толпа на стадионе.</d>
+        <e label="спорт E">Толпа на стадионе.</e>
+        <f label="спорт F">Толпа на стадионе.</f>
+        <g label="спорт G">Толпа на стадионе.</g>
+      </arena>
+    </environ>
+    <trackingnone label="ровно">Ракета летит прямо и не двигается вверх или вниз. </trackingnone>
+    <trackinghoming label="круиз">Ракета будет двигаться в соответствии с рельефом местности, огибая холмы и стены.</trackinghoming>
+    <constraint>
+      <leftright label="лев/прав">Двигается только вправо или влево. </leftright>
+      <fwdback label="впер/наз">Двигается только вперед или назад. </fwdback>
+      <updown label="ввер/вниз" />
+      <northsouth label="сев/юг">Двигается только на юг или на север. </northsouth>
+      <eastwest label="вост/зап">Двигается только на восток или запад. </eastwest>
+      <immobile label="замри">Не двигается, даже во время столкновения. </immobile>
+    </constraint>
+    <once label="один раз">Код после DO (ДЕЛАТЬ) будет исполняться только один раз, каждый раз когда условие в WHEN (КОГДА) выполнено. </once>
+  </modifier>
+  <actuator>
+    <nothing label="ничего" />
+    <movement label="двигаться">Путешествует по миру. Исследуйте этот параметр, т.к. разные персонажи обладают разными свойствами движения. </movement>
+    <turn label="поворот">Изменяет направление, куда смотрит персонаж. </turn>
+    <eat label="съесть">Потребляет цель, которая должна быть достаточно близко. </eat>
+    <say label="сказать">Выводит текст на экран, либо в облачке, либо как диалоговое окно. Используйте &lt;cr&gt;  для перевода строки.</say>
+    <open label="открыть">Работает по разному с разными персонажами. Пробуйте!</open>
+    <close label="закрыть">Работает по разному с разными персонажами. Пробуйте!</close>
+    <kick label="запуск">Запускает в воздух объект, если находится достаточно близко. Может запустить с разной силой. </kick>
+    <make label="создать">Создает другой объект. Может создать базовые объекты или всё, что помечено как Родитель.</make>
+    <launch label="запуск">Запускает в воздух объект, если находится достаточно близко. Может запустить с разной силой. </launch>
+    <express label="эмоции">Выражает эмоции или другие эффекты. Некоторые эмоции могут изменить лицо персонажа, другие выводятся над персонажем.</express>
+    <color label="цвет">Меняет ваш цвет или цвет объекта-цели.</color>
+    <glow label="сияние">Излучает радиоактивное свечение. Может изменять цвет. </glow>
+    <sound label="играть">Издает звуки! Есть из чего выбрать. </sound>
+    <stopsound label="молчать">Перестает издавать звуки</stopsound>
+    <jump label="прыгать">Разные персонажи могут прыгать на различную высоту.</jump>
+    <watersurface label="всплыть">Действие Всплыть заставляет персонажи, живущие под водой, подняться над уровнем воды. </watersurface>
+    <waterdive label="нырять">Действие Нырять заставляет персонажи, живущие под водой, нырять на дно. </waterdive>
+    <airrise label="взлететь">Действие Взлететь заставляет летающие персонажи взмывать в небо. </airrise>
+    <airdrop label="к земле">Действие К земле заставляет летающих персонажей лететь по направлению к земле.</airdrop>
+    <switchtask label="перейти">Переключение на другую страницу программы. Полезно для изменения поведения персонажей</switchtask>
+    <shoot label="стрелять" />
+    <shoot2 label="стрелять">Стреляет пульками или ракетами.</shoot2>
+    <damage label="ущерб">Уменьшает здоровье либо вас самих, либо другого персонажа (в кого вы целитесь)</damage>
+    <heal label="лечить">Добавляет здоровье (жизнь)  либо вам, либо персонажу. Действие Heal (Лечить) позволяет восстановить ущерб. По умолчанию, лечится объект-цель, но сам персонаж тоже может быть вылечен, если  добавить параметр Me (Меня). 
+
+</heal>
+    <zap label="глухой">Оглушает либо вас, либо персонаж, в кого вы целитесь, на несколько секунд. </zap>
+    <pop label="нокаут">Полностью лишает бот или вас самих здоровья (жизни), до тех пор, пока ваше здоровье не установлено заново кем-то еще. </pop>
+    <boom label="взрыв">Заставляет вас самих или цель пропасть со взрывом. </boom>
+    <vanish label="невидим">Заставляет вас самих или цель пропасть тихо. </vanish>
+    <grab label="взять">Подбирает объект, если он достаточно близко. Вы можете держать только один объект. </grab>
+    <drop label="уронить">Вы уроните то, что у вас в руках. </drop>
+    <give label="дать">Вы даете то, что у вас в руках, другому персонажу. Если он не может держать этот объект, то объект упадет. </give>
+    <reset label="сброс">Сбрасывает статус игры или персонажа. </reset>
+    <restart label="заново">Сбрасывает статус игры или персонажа. </restart>
+    <gameover label="конец">Заканчивает игру. </gameover>
+    <victory label="победа">Заканчивает игру и выводит на экран сообщение о победе. Вы можете указать цвет сообщения. </victory>
+    <score label="очки">Добавляет очки к счету. </score>
+    <unscore label="вычесть">Вычитает очки из счета. </unscore>
+    <camera>
+      <followme label="следить">Камера должна следовать за этим персонажем. </followme>
+      <ignoreme label="игнор">Не беспокоиться, чтобы этот персонаж всегда был вам виден. </ignoreme>
+      <firstperson label="1 игрок">Видеть картинку глазами персонажа. </firstperson>
+    </camera>
+  </actuator>
+  <root />
+  <group>
+    <colors label="цвета" />
+    <game label="игра" />
+    <more label="еще" />
+    <players label="игроки" />
+    <playermods label="игроки" />
+    <actions label="действия" />
+    <combat label="сражение" />
+    <holding label="держать" />
+    <sounds label="звуки" />
+    <event label="события">
+      <explode label="взрыв" />
+      <silly label="смешной" />
+      <musical label="музыка">
+        <glock label="м-фон" />
+        <saw label="пила" />
+        <sine label="волна" />
+        <gong label="гонг" />
+        <square label="меандр" />
+        <drums label="ударные" />
+      </musical>
+      <arcade label="аркада" />
+      <misc label="разное" />
+    </event>
+    <environ label="среда">
+      <forest label="лес" />
+      <arena label="стадион" />
+    </environ>
+    <music label="музыка">
+      <omni label="новое" />
+      <mystery label="мистерия" />
+      <driving label="машина" />
+      <drama label="драма" />
+    </music>
+    <constraints label="огранич" />
+    <directions label="куда" />
+    <filters>
+      <directions label="куда" />
+    </filters>
+    <expressions label="эмоции" />
+    <projectiles label="projectile" />
+    <camera label="видеть" />
+    <reset label="сбросить" />
+    <options label="параметры" />
+    <compare label="сравнить" />
+    <points label="баллы" />
+    <time label="время" />
+    <speed label="скорость" />
+    <strength label="сила" />
+    <angle label="высота" />
+    <tracking label="слежение" />
+    <bots label="боты I" />
+    <bots2 label="боты II" />
+    <objects label="объекты" />
+    <tasks label="задачи" />
+    <terrains label="типы" />
+    <waters label="типы" />
+    <creatables label="родитель" />
+    <keyboard>
+      <letters label="буквы" />
+      <numbers label="числа" />
+      <symbols label="знаки" />
+      <misc label="разное" />
+    </keyboard>
+
+    <scorebucketmodifiers label="world scores" />
+    <scorebucketmodifiers.local label="private scores" />
+    <scorefilters label="scores"></scorefilters>
+    <scorebucketfilters label="world scores" />
+    <scorebucketfilters.local label="private scores" />
+
+  </group>
+</Tiles>
